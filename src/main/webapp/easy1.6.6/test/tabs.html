@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Easy UI</title>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../local/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="easyuitest.js"></script>
+<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css"></script>
+<link rel="stylesheet" type="text/css" href="../themes/icon.css"></script>
+</head>
+<body>
+	<!--<div id="tabsbox" class="easyui-tabs" style="width:500px;height:250px;">
+		<div title="Tab1" style="padding:20px;display:none;">tab1</div>
+		<div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">tab2</div>
+		<div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="display:none;">tab3</div>
+	</div>-->
+	
+	<div id="tabsbox" style="width:500px;height:250px;">
+		<div title="Tab1"  data-options="closable:true">tab1</div>
+		<div title="Tab2"  data-options="closable:true">tab2</div>
+		<div title="Tab3">tab3</div>
+	</div>
+	
+	<div id="tt">
+		<a class="icon-add" onclick="javascript:alert('add')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		<a class="icon-edit" onclick="javascript:alert('edit')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		<a class="icon-cut" onclick="javascript:alert('cut')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+	</div>
+	
+	<div id="tab-tools">
+		<a href="#" class="easyui-linkbutton" plain="true" iconCls="icon-add"></a>
+		<a href="#" class="easyui-linkbutton" plain="true" iconCls="icon-save"></a>
+	</div>
+	
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Easy UI</title>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../local/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="easyuitest.js"></script>
+<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css"></script>
+<link rel="stylesheet" type="text/css" href="../themes/icon.css"></script>
+</head>
+<body>
+	<!--
+	<div id="win" class="easyui-window" title="My Window" style="width:600px;height:400px"
+        data-options="iconCls:'icon-save',modal:true">
+		Window Content
+	</div>
+	-->
+	<!--
+	<div id="win" class="easyui-window" title="My Window" style="width:600px;height:400px"
+        data-options="iconCls:'icon-save',modal:true">
+		<div class="easyui-layout" data-options="fit:true">
+			<div data-options="region:'north',split:true" style="height:100px"></div>
+			<div data-options="region:'center'">
+				The Content.
+			</div>
+		</div>
+	</div>-->
+	<!--
+	<div style="width:800px;height:500px;border:1px solid #ccc;overflow:hidden;position:relative;">
+		<div id="windowbox"></div>
+	</div>
+	-->
+	
+	<div id="windowbox" class="easyui-window" style="width:400px;height:250px;">
+		<div class="easyui-layout" data-options="fit:true">
+			<div data-options="region:'west',split:true" style="width:50px;">左边</div>
+			<div data-options="region:'center'">内容</div>
+			<div data-options="region:'south',border:false" style="height:35px;text-align:center;margin-top:3px">
+				<a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" style="width:80px">确认</a>
+				<a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" style="width:80px">取消</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

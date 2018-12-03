@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Easy UI</title>
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../local/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="easyuitest.js"></script>
+<link rel="stylesheet" type="text/css" href="../themes/default/easyui.css"></script>
+<link rel="stylesheet" type="text/css" href="../themes/icon.css"></script>
+</head>
+<!-- 1. Create Layout via markup. -->
+<body class="easyui-layout">
+	<div id="layoutbox" class="easyui-layout" style="width:600px;height:400px;">
+		<div data-options="
+			region:'north',
+			title:'North Title',
+			split:true,
+			border:true,
+			split:true,
+			iconCls:'icon-save',
+			href:'#',
+			collapsiable:true,
+			midnWidth:100,
+			minHeight:50,
+			maxWdith:500,
+			maxHeight:500,
+			expandMode:'float',
+			collapsedSize:50,
+			hideExpandTool:false,
+			hideCollapsedContent:true,
+			collapsedContent:123,
+			" 
+			style="height:100px;"></div> <!--	expandMode:The expanding mode when click on the collapsed panel. Possible values are 'float','dock' and null. float: the region panel will expand and float on the top. dock: the region panel will null: nothing happens.-->
+		<div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+		<div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+		<div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+		<div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+	</div>
+</body>
+
+
+<!-- 2. Create layout on whole page.
+<body class="easyui-layout">
+    <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'south',title:'South Title',split:true" style="height:100px;"></div>
+    <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+    <div data-options="region:'west',title:'West',split:true" style="width:100px;"></div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+</body>
+-->
+
+<!-- 3. Create nested layout.  Notice that the west panel of inner layout is collapsed.
+<body class="easyui-layout"> 
+    <div data-options="region:'north'" style="height:100px"></div>
+    <div data-options="region:'center'">
+        <div class="easyui-layout" data-options="fit:true">
+            <div data-options="region:'west',collapsed:true" style="width:180px"></div>
+            <div data-options="region:'center'"></div>
+        </div>
+    </div>
+</body>
+-->
+<!--
+4. Loading content with ajax The layout is created based on panel. Each region panel provides built-in support for asynchronously loading content from URLs. Using the async loading technology, users can make their layout page display more faster.
+<body class="easyui-layout">
+    <div data-options="region:'west',href:'west_content.php'" style="width:180px" ></div>
+    <div data-options="region:'center',href:'center_content.php'" ></div>
+</body>
+-->
+</html>
